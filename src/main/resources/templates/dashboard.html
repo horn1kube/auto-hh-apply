@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Vacancy Reply - Панель управления</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 4px solid #667eea;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        
+        .action-section {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-weight: 500;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .btn.dry-run {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+        }
+        
+        .alert {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid;
+        }
+        
+        .alert.success {
+            background: #d4edda;
+            color: #155724;
+            border-color: #28a745;
+        }
+        
+        .alert.warning {
+            background: #fff3cd;
+            color: #856404;
+            border-color: #ffc107;
+        }
+        
+        .alert.error {
+            background: #f8d7da;
+            color: #721c24;
+            border-color: #dc3545;
+        }
+        
+        .logs-section {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        
+        .logs-section h3 {
+            margin-bottom: 15px;
+            color: #495057;
+        }
+        
+        .log-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #e9ecef;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 0.9rem;
+        }
+        
+        .log-item:last-child {
+            border-bottom: none;
+        }
+        
+        .log-action {
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+        
+        .log-action.found {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .log-action.skip {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+        
+        .log-action.apply-ok {
+            background: #e8f5e8;
+            color: #388e3c;
+        }
+        
+        .log-action.apply-fail {
+            background: #ffebee;
+            color: #d32f2f;
+        }
+        
+        .log-time {
+            color: #6c757d;
+            font-size: 0.8rem;
+        }
+        
+        .dry-run-banner {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .log-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Auto Vacancy Reply</h1>
+            <p>Автоматические отклики на вакансии HH.ru</p>
+        </div>
+        
+        <div class="content">
+            <!-- Dry Run Banner -->
+            <div th:if="${isDryRun}" class="dry-run-banner">
+                ⚠️ РЕЖИМ ТЕСТИРОВАНИЯ - Отклики не отправляются
+            </div>
+            
+            <!-- Flash Messages -->
+            <div th:if="${message}" th:class="'alert ' + ${messageType}" th:text="${message}"></div>
+            
+            <!-- Statistics -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" th:text="${totalApplied}">0</div>
+                    <div class="stat-label">Всего откликов</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" th:text="${#lists.size(recentLogs)}">0</div>
+                    <div class="stat-label">Последние события</div>
+                </div>
+            </div>
+            
+            <!-- Action Section -->
+            <div class="action-section">
+                <h3>Запуск обработки</h3>
+                <p style="margin: 15px 0; color: #6c757d;">
+                    Нажмите кнопку для поиска и автоматических откликов на подходящие вакансии
+                </p>
+                <form th:action="@{/run}" method="post" style="display: inline;">
+                    <button type="submit" th:class="'btn ' + (${isDryRun} ? 'dry-run' : '')">
+                        <span th:if="${isDryRun}">🚀 Запустить тестирование</span>
+                        <span th:unless="${isDryRun}">🚀 Запустить сейчас</span>
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Recent Logs -->
+            <div class="logs-section">
+                <h3>Последние события</h3>
+                <div th:if="${#lists.isEmpty(recentLogs)}" style="text-align: center; color: #6c757d; padding: 20px;">
+                    Нет событий
+                </div>
+                <div th:each="log : ${recentLogs}" class="log-item">
+                    <div>
+                        <span th:class="'log-action ' + ${log.action.toLowerCase().replace('_', '-')}" 
+                              th:text="${log.action}">ACTION</span>
+                        <span th:text="'vacancyId=' + ${log.vacancyId}">vacancyId</span>
+                        <span th:if="${log.message}" th:text="' - ' + ${log.message}">message</span>
+                    </div>
+                    <div class="log-time" th:text="${#temporals.format(log.timestamp, 'HH:mm:ss')}">time</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
