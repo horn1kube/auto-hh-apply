@@ -66,7 +66,7 @@ public class HhClient {
                     .header("Accept-Language", "ru,en;q=0.9")
                     .header("Accept-Encoding", "gzip, deflate, br")
                     .header("X-Requested-With", "XMLHttpRequest")
-                    .header("x-static-version", "25.31.1.1")
+                    .header("x-static-version", "25.31.3.2")
                     .timeout(Duration.ofMillis(env.getHttpReadTimeoutMs()))
                     .GET()
                     .build();

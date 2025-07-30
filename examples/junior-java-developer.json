@@ -1,0 +1,73 @@
+{
+  "fullName": "Дмитрий Волков",
+  "summary": "Junior Java-разработчик с 1 годом опыта. Изучаю Spring Boot, базы данных и основы веб-разработки. Готов к обучению и росту в команде.",
+  "skills": [
+    "Java",
+    "Spring Boot",
+    "Spring Framework",
+    "Maven",
+    "Git",
+    "SQL",
+    "PostgreSQL",
+    "REST API",
+    "JUnit",
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "experienceYears": 1,
+  "stack": [
+    "Java 8-11",
+    "Spring Boot 2.x",
+    "Spring Data JPA",
+    "PostgreSQL",
+    "Maven",
+    "Git",
+    "JUnit"
+  ],
+  "preferredLocations": [
+    "Москва",
+    "Санкт-Петербург",
+    "remote"
+  ],
+  "preferredWorkFormat": "office",
+  "salaryExpectations": {
+    "min": 80000,
+    "max": 120000,
+    "current": 90000
+  },
+  "languages": {
+    "Русский": "Родной",
+    "Английский": "A2-B1"
+  },
+  "extras": {
+    "education": "Высшее техническое (МАИ)",
+    "certifications": [],
+    "teamSize": "2-5 человек",
+    "projectTypes": [
+      "Простые веб-приложения",
+      "CRUD операции",
+      "REST API"
+    ],
+    "preferredTechnologies": [
+      "Spring Boot",
+      "PostgreSQL",
+      "Java"
+    ],
+    "interests": [
+      "Изучение новых технологий",
+      "Веб-разработка",
+      "Базы данных"
+    ],
+    "achievements": [
+      "Создал первое веб-приложение на Spring Boot",
+      "Изучил основы SQL и PostgreSQL",
+      "Написал тесты с JUnit"
+    ],
+    "learningGoals": [
+      "Изучить микросервисы",
+      "Освоить Docker",
+      "Познакомиться с Kubernetes"
+    ]
+  }
+} 

@@ -1,0 +1,106 @@
+{
+  "fullName": "Александр Смирнов",
+  "summary": "Senior Java-разработчик с 7 годами опыта в разработке высоконагруженных веб-приложений и микросервисов. Специализируюсь на Spring Boot, микросервисной архитектуре и облачных технологиях.",
+  "skills": [
+    "Java",
+    "Spring Boot",
+    "Spring Framework",
+    "Spring Security",
+    "Spring Data JPA",
+    "Hibernate",
+    "Maven",
+    "Gradle",
+    "Git",
+    "SQL",
+    "PostgreSQL",
+    "MySQL",
+    "Redis",
+    "Docker",
+    "Kubernetes",
+    "REST API",
+    "GraphQL",
+    "JUnit",
+    "Mockito",
+    "TestContainers",
+    "Jenkins",
+    "GitLab CI",
+    "AWS",
+    "Microservices",
+    "RabbitMQ",
+    "Kafka"
+  ],
+  "experienceYears": 7,
+  "stack": [
+    "Java 8-21",
+    "Spring Boot 2.x-3.x",
+    "Spring Cloud",
+    "Spring Security",
+    "Spring Data JPA",
+    "Hibernate",
+    "PostgreSQL",
+    "MySQL",
+    "Redis",
+    "MongoDB",
+    "Docker",
+    "Kubernetes",
+    "Jenkins",
+    "GitLab CI",
+    "AWS (EC2, S3, RDS)",
+    "RabbitMQ",
+    "Apache Kafka",
+    "Elasticsearch",
+    "Prometheus",
+    "Grafana"
+  ],
+  "preferredLocations": [
+    "Москва",
+    "Санкт-Петербург",
+    "Новосибирск",
+    "Екатеринбург",
+    "Казань"
+  ],
+  "preferredWorkFormat": "hybrid",
+  "salaryExpectations": {
+    "min": 250000,
+    "max": 400000,
+    "current": 320000
+  },
+  "languages": {
+    "Русский": "Родной",
+    "Английский": "B2-C1",
+    "Немецкий": "A2"
+  },
+  "extras": {
+    "education": "Высшее техническое (МГТУ им. Баумана)",
+    "certifications": [
+      "Oracle Certified Professional Java Programmer",
+      "AWS Certified Developer",
+      "Kubernetes Administrator"
+    ],
+    "teamSize": "5-15 человек",
+    "projectTypes": [
+      "Высоконагруженные веб-приложения",
+      "Микросервисная архитектура",
+      "E-commerce платформы",
+      "FinTech решения"
+    ],
+    "preferredTechnologies": [
+      "Spring Boot",
+      "PostgreSQL",
+      "Docker",
+      "Kubernetes"
+    ],
+    "interests": [
+      "Микросервисы",
+      "Облачные технологии",
+      "DevOps практики",
+      "Архитектура приложений"
+    ],
+    "achievements": [
+      "Руководил командой из 8 разработчиков",
+      "Оптимизировал производительность системы на 40%",
+      "Внедрил CI/CD pipeline",
+      "Мигрировал монолит на микросервисы"
+    ]
+  }
+} 

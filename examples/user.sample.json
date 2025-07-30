@@ -1,0 +1,50 @@
+{
+  "fullName": "Иван Петров",
+  "summary": "Java-разработчик с 5 годами опыта в разработке веб-приложений",
+  "skills": [
+    "Java",
+    "Spring Boot",
+    "Spring Framework",
+    "Hibernate",
+    "Maven",
+    "Git",
+    "SQL",
+    "PostgreSQL",
+    "REST API",
+    "JUnit",
+    "Docker"
+  ],
+  "experienceYears": 5,
+  "stack": [
+    "Java 17",
+    "Spring Boot 3.x",
+    "Spring Security",
+    "Spring Data JPA",
+    "PostgreSQL",
+    "Redis",
+    "Docker",
+    "Kubernetes",
+    "Jenkins",
+    "Maven"
+  ],
+  "preferredLocations": [
+    "Москва",
+    "Санкт-Петербург",
+    "Новосибирск"
+  ],
+  "preferredWorkFormat": "hybrid",
+  "salaryExpectations": {
+    "min": 150000,
+    "max": 250000,
+    "current": 180000
+  },
+  "languages": {
+    "Русский": "Родной",
+    "Английский": "B2"
+  },
+  "extras": {
+    "teamSize": "5-10 человек",
+    "projectTypes": "Веб-приложения, микросервисы",
+    "preferredTechnologies": "Spring, PostgreSQL, Docker"
+  }
+} 

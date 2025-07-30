@@ -33,10 +33,40 @@ dependencies {
     implementation("org.slf4j:slf4j-api")
     implementation("ch.qos.logback:logback-classic")
     
+    // Selenium for web scraping
+    implementation("org.seleniumhq.selenium:selenium-java:4.15.0")
+    implementation("org.seleniumhq.selenium:selenium-chrome-driver:4.15.0")
+    
+    // HTTP client (for Ollama API)
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    
+    // Ollama Java client
+    implementation("io.github.ollama4j:ollama4j:1.0.100")
+    
+    // PDF parsing
+    implementation("org.apache.pdfbox:pdfbox:2.0.29")
+
+    
     // Test dependencies
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.1")
+    testImplementation("org.mockito:mockito-core:5.8.0")
+    testImplementation("org.mockito:mockito-junit-jupiter:5.8.0")
 }
 
 tasks.withType<Test> {
     useJUnitPlatform()
+}
+
+// Task для создания JAR с зависимостями
+tasks.register<Jar>("fatJar") {
+    dependsOn.addAll(listOf("compileJava", "compileTestJava", "processTestResources"))
+    archiveClassifier.set("standalone")
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    manifest { attributes(mapOf("Main-Class" to "app.Application")) }
+    val sourcesMain = sourceSets.main.get()
+    val contents = configurations.runtimeClasspath.get()
+        .map { if (it.isDirectory) it else zipTree(it) } +
+        sourcesMain.output
+    from(contents)
 } 

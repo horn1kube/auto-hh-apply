@@ -1,0 +1,80 @@
+{
+  "fullName": "Мария Козлова",
+  "summary": "Middle Java-разработчик с 3 годами опыта в разработке веб-приложений. Имею опыт работы с Spring Boot, базами данных и REST API.",
+  "skills": [
+    "Java",
+    "Spring Boot",
+    "Spring Framework",
+    "Spring Data JPA",
+    "Hibernate",
+    "Maven",
+    "Git",
+    "SQL",
+    "PostgreSQL",
+    "MySQL",
+    "Docker",
+    "REST API",
+    "JUnit",
+    "Mockito",
+    "Swagger",
+    "Lombok",
+    "MapStruct"
+  ],
+  "experienceYears": 3,
+  "stack": [
+    "Java 8-17",
+    "Spring Boot 2.x",
+    "Spring Data JPA",
+    "Hibernate",
+    "PostgreSQL",
+    "MySQL",
+    "Docker",
+    "Maven",
+    "Git",
+    "JUnit",
+    "Mockito"
+  ],
+  "preferredLocations": [
+    "Москва",
+    "Санкт-Петербург",
+    "Новосибирск",
+    "remote"
+  ],
+  "preferredWorkFormat": "remote",
+  "salaryExpectations": {
+    "min": 120000,
+    "max": 200000,
+    "current": 150000
+  },
+  "languages": {
+    "Русский": "Родной",
+    "Английский": "B1"
+  },
+  "extras": {
+    "education": "Высшее техническое (МГУ)",
+    "certifications": [
+      "Oracle Certified Associate Java Programmer"
+    ],
+    "teamSize": "3-8 человек",
+    "projectTypes": [
+      "Веб-приложения",
+      "REST API",
+      "Базы данных"
+    ],
+    "preferredTechnologies": [
+      "Spring Boot",
+      "PostgreSQL",
+      "Docker"
+    ],
+    "interests": [
+      "Веб-разработка",
+      "Базы данных",
+      "API дизайн"
+    ],
+    "achievements": [
+      "Разработала REST API для e-commerce",
+      "Оптимизировала запросы к БД",
+      "Внедрила Docker в проект"
+    ]
+  }
+} 

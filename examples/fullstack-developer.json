@@ -1,0 +1,69 @@
+{
+  "fullName": "Елена Петрова",
+  "summary": "Full Stack разработчик с 5 годами опыта. Специализируюсь на Java backend и React frontend. Имею опыт работы с микросервисами и облачными технологиями.",
+  "skills": [
+    "Java",
+    "Spring Boot",
+    "Spring Framework",
+    "Spring Security",
+    "Hibernate",
+    "PostgreSQL",
+    "MySQL",
+    "Redis",
+    "Docker",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Redux",
+    "Node.js",
+    "Express.js",
+    "HTML",
+    "CSS",
+    "SASS",
+    "Webpack",
+    "Git",
+    "REST API",
+    "GraphQL",
+    "JUnit",
+    "Jest",
+    "Cypress"
+  ],
+  "experienceYears": 5,
+  "stack": [
+    "Java 8-17",
+    "Spring Boot 2.x-3.x",
+    "Spring Security",
+    "Spring Data JPA",
+    "PostgreSQL",
+    "Redis",
+    "Docker",
+    "JavaScript ES6+",
+    "TypeScript",
+    "React 16-18",
+    "Redux Toolkit",
+    "Node.js",
+    "Express.js",
+    "Webpack",
+    "Jest",
+    "Cypress"
+  ],
+  "preferredLocations": [
+    "Москва",
+    "Санкт-Петербург",
+    "Новосибирск",
+    "remote"
+  ],
+  "preferredWorkFormat": "hybrid",
+  "salaryExpectations": {
+    "min": 200000,
+    "max": 350000,
+    "current": 280000
+  },
+  "languages": {
+    "Русский": "Родной",
+    "Английский": "B2"
+  },
+  "extras": {
+    "education": "Высшее техническое (МФТИ)"
+  }
+} 
