@@ -1,4 +1,4 @@
-# Auto Vacancy Reply
+# Auto Vacancy Reply (Vibecoding project)
 
 Автоматическое приложение для откликов на вакансии HH.ru с веб-панелью управления.
 
